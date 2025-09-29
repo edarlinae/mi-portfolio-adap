@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TranslationService, ProjectTranslations } from '../../services/translation';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-// CAMBIO: Se elimina faFirebase de esta línea
 import { faAngular, faCss3Alt, faGithub, faHtml5, faJs, faSass } from '@fortawesome/free-brands-svg-icons';
-// CAMBIO: Se añade faDatabase a esta línea
 import { faCode, faEye, faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 export interface Technology {
@@ -39,7 +37,33 @@ export class ProjectListComponent {
   faEye = faEye;
 
   protected readonly projects = signal<Project[]>([
-    {
+    // ORDEN ACTUALIZADO
+    { // 1. Kairos
+      imageUrl: 'assets/kairosgab.png',
+      translationKey: 'project4',
+      technologies: [
+        { name: 'Angular', icon: faAngular, color: '#dd0031' },
+        { name: 'HTML5', icon: faHtml5, color: '#e34f26' },
+        { name: 'SCSS', icon: faSass, color: '#cc6699' },
+        { name: 'TypeScript', isCustom: true }
+      ],
+      liveDemoUrl: 'https://www.gabinetekairos.es/',
+      githubUrl: 'https://github.com/edarlinae/kairos-web'
+    },
+    { // 2. Apego Consciente
+      imageUrl: 'assets/apego-consciente.png',
+      translationKey: 'project3',
+      technologies: [
+        { name: 'Angular', icon: faAngular, color: '#dd0031' },
+        { name: 'TypeScript', isCustom: true },
+        { name: 'HTML5', icon: faHtml5, color: '#e34f26' },
+        { name: 'CSS3', icon: faCss3Alt, color: '#1572b6' },
+        { name: 'Firebase', icon: faDatabase, color: '#FFCA28' }
+      ],
+      liveDemoUrl: '#',
+      githubUrl: 'https://github.com/edarlinae/apego-consciente'
+    },
+    { // 3. ClickToCall
       imageUrl: 'assets/clicktocall-preview.png',
       translationKey: 'project1',
       technologies: [
@@ -51,7 +75,7 @@ export class ProjectListComponent {
       liveDemoUrl: 'https://chromewebstore.google.com/detail/clicktocall-premium-number/hcdjknjpbnhdmpdkeofgmafdcepdbjfg?hl=es',
       githubUrl: 'https://github.com/edarlinae/ClickToCall'
     },
-    {
+    { // 4. Weather App
       imageUrl: 'assets/weather-app-preview.jpg',
       translationKey: 'project2',
       technologies: [
@@ -63,32 +87,6 @@ export class ProjectListComponent {
       ],
       liveDemoUrl: 'https://weather-app-edarlinae.vercel.app/',
       githubUrl: 'https://github.com/edarlinae/Weather-App'
-    },
-    {
-      imageUrl: 'assets/apego-consciente.png',
-      translationKey: 'project3',
-      technologies: [
-        { name: 'Angular', icon: faAngular, color: '#dd0031' },
-        { name: 'TypeScript', isCustom: true },
-        { name: 'HTML5', icon: faHtml5, color: '#e34f26' },
-        { name: 'CSS3', icon: faCss3Alt, color: '#1572b6' },
-        // CAMBIO: Se usa faDatabase como sustituto de Firebase
-        { name: 'Firebase', icon: faDatabase, color: '#FFCA28' }
-      ],
-      liveDemoUrl: '#',
-      githubUrl: 'https://github.com/edarlinae/apego-consciente'
-    },
-    {
-      imageUrl: 'assets/kairosgab.png',
-      translationKey: 'project4',
-      technologies: [
-        { name: 'Angular', icon: faAngular, color: '#dd0031' },
-        { name: 'HTML5', icon: faHtml5, color: '#e34f26' },
-        { name: 'SCSS', icon: faSass, color: '#cc6699' },
-        { name: 'TypeScript', isCustom: true }
-      ],
-      liveDemoUrl: 'https://www.gabinetekairos.es/',
-      githubUrl: 'https://github.com/edarlinae/kairos-web'
     }
   ]);
 
