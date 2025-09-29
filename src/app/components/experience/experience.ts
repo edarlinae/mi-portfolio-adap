@@ -4,7 +4,7 @@ import { TranslationService, JobTranslations } from '../../services/translation'
 
 export interface Job {
   date: string;
-  translationKey: 'job1' | 'job2';
+  translationKey: 'job1' | 'job2' | 'job3';
 }
 
 @Component({
@@ -20,6 +20,10 @@ export class Experience {
 
   protected readonly jobs = signal<Job[]>([
     {
+      date: 'Agosto 2025 - Actualmente',
+      translationKey: 'job3'
+    },
+    {
       date: 'Febrero 2025 - Junio 2025',
       translationKey: 'job1'
     },
@@ -30,7 +34,7 @@ export class Experience {
   ]);
 
   // traducción segura
-  getJobTranslation(key: 'job1' | 'job2'): JobTranslations {
+  getJobTranslation(key: 'job1' | 'job2' | 'job3'): JobTranslations {
     return this.t()[key];
   }
 }

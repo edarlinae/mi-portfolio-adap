@@ -13,13 +13,41 @@ export interface ProjectTranslations {
   description: string;
 }
 
+export interface Translations {
+  nav_about: string;
+  nav_experience: string;
+  nav_projects: string;
+  nav_contact: string;
+  hero_subtitle: string;
+  hero_button: string;
+  hero_cv_button: string;
+  about_title: string;
+  about_p1: string;
+  about_p2: (string | string[])[];
+  about_motto: string;
+  about_p3: string;
+  experience_title: string;
+  projects_title: string;
+  contact_title: string;
+  contact_p1: string;
+  footer_text: string;
+  job1: JobTranslations;
+  job2: JobTranslations;
+  job3: JobTranslations;
+  project1: ProjectTranslations;
+  project2: ProjectTranslations;
+  project3: ProjectTranslations;
+  project4: ProjectTranslations;
+}
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class TranslationService {
   private currentLanguage = signal<Language>('es');
 
-  private translations = {
+  private translations: Record<Language, Translations> = {
     es: {
       nav_about: 'Sobre mí',
       nav_experience: 'Experiencia',
@@ -40,6 +68,16 @@ export class TranslationService {
       footer_text: '© 2025 - Desarrollado con Angular por Alicia Caparrós.',
       job1: { title: 'Programadora', company: 'Premium Numbers', description: ['Desarrollo de un conjunto de extensiones de navegador para Chrome, enfocadas en la optimización de la productividad y la comunicación del usuario.','Implementación de interfaces interactivas para iniciar llamadas y enviar mensajes a través de una API REST de centralita.','Automatización de flujos de trabajo e integración de sistemas CRM utilizando n8n y JavaScript.'] },
       job2: { title: 'Formadora y Desarrolladora de Contenidos Digitales', company: 'COCEDER', description: ['Análisis de las necesidades del usuario para diseñar y adaptar contenidos tecnológicos, asegurando una curva de aprendizaje suave.','Soporte técnico y resolución de problemas a usuarios con distintos niveles de competencia digital.'] },
+      job3: {
+        title: 'Desarrolladora Web',
+        company: 'Gabinete Psicosocial Kaidos',
+        description: [
+          'Desarrollo y mantenimiento del sitio web principal de la empresa.',
+          'Gestión integral de aplicaciones internas, asegurando su correcto funcionamiento y rendimiento.',
+          'Creación de nuevas soluciones de software a medida para optimizar la atención a usuarios y pacientes.',
+          'Seguimiento y evolución de las herramientas tecnológicas adaptadas a las necesidades del gabinete.'
+        ]
+      },
       project1: { title: 'Portfolio Profesional (Este Proyecto)', description: 'Portfolio personal interactivo desarrollado desde cero con las últimas versiones de Angular para mostrar mis proyectos y habilidades. Incluye modo claro/oscuro y un diseño responsive.' },
       project2: { title: 'ClickToCall - Extensión de Chrome', description: 'Extensión compleja que detecta teléfonos en webs y permite llamar o enviar WhatsApps vía API, inyectando UI dinámica en las páginas.' },
       project3: {
@@ -71,6 +109,16 @@ export class TranslationService {
       footer_text: '© 2025 - Developed with Angular by Alicia Caparrós.',
       job1: { title: 'Programmer', company: 'Premium Numbers', description: ['Development of a set of browser extensions for Chrome, focused on optimizing user productivity and communication.','Implementation of interactive interfaces to initiate calls and send messages through a PBX REST API.','Workflow automation and CRM systems integration using n8n and JavaScript.'] },
       job2: { title: 'Trainer and Digital Content Developer', company: 'COCEDER', description: ['Analysis of user needs to design and adapt technological content, ensuring a smooth learning curve.','Technical support and problem-solving for users with different levels of digital competence.'] },
+      job3: {
+        title: 'Web Developer',
+        company: 'Gabinete Psicosocial Kaidos',
+        description: [
+          'Development and maintenance of the company\'s main website.',
+          'Comprehensive management of internal applications, ensuring their proper functioning and performance.',
+          'Creation of new custom software solutions to optimize care for users and patients.',
+          'Monitoring and evolution of technological tools adapted to the firm\'s needs.'
+        ]
+      },
       project1: { title: 'Professional Portfolio (This Project)', description: 'Interactive personal portfolio developed from scratch with the latest versions of Angular to showcase my projects and skills. Features light/dark mode and a responsive design.' },
       project2: { title: 'ClickToCall - Chrome Extension', description: 'Complex extension that detects phone numbers on websites and allows calling or sending WhatsApp messages via API, injecting dynamic UI into the pages.' },
       project3: {
@@ -102,6 +150,16 @@ export class TranslationService {
       footer_text: '© 2025 - Développé avec Angular par Alicia Caparrós.',
       job1: { title: 'Programmeuse', company: 'Premium Numbers', description: ['Développement d\'un ensemble d\'extensions de navigateur pour Chrome, axées sur l\'optimisation de la productivité et de la communication de l\'utilisateur.','Implémentation d\'interfaces interactives pour lancer des appels et envoyer des messages via une API REST de central téléphonique.','Automatisation des flux de travail et intégration des systèmes CRM en utilisant n8n et JavaScript.'] },
       job2: { title: 'Formatrice et Développeuse de Contenus Numériques', company: 'COCEDER', description: ['Analyse des besoins des utilisateurs pour concevoir et adapter des contenus technologiques, assurant une courbe d\'apprentissage douce.','Support technique et résolution de problèmes pour des utilisateurs ayant différents niveaux de compétence numérique.'] },
+      job3: {
+        title: 'Développeuse Web',
+        company: 'Gabinete Psicosocial Kaidos',
+        description: [
+          'Développement et maintenance du site web principal de l\'entreprise.',
+          'Gestion complète des applications internes, en assurant leur bon fonctionnement et leurs performances.',
+          'Création de nouvelles solutions logicielles sur mesure pour optimiser la prise en charge des utilisateurs et des patients.',
+          'Suivi et évolution des outils technologiques adaptés aux besoins du cabinet.'
+        ]
+      },
       project1: { title: 'Portfolio Professionnel (Ce Projet)', description: 'Portfolio personnel interactif développé à partir de zéro avec les dernières versions d\'Angular pour présenter mes projets et compétences. Inclut un mode clair/sombre et un design responsive.' },
       project2: { title: 'ClickToCall - Extension Chrome', description: 'Extension complexe qui détecte les numéros de téléphone sur les sites web et permet d\'appeler ou d\'envoyer des messages WhatsApp via une API, en injectant une UI dynamique dans les pages.' },
       project3: {
@@ -133,6 +191,16 @@ export class TranslationService {
       footer_text: '© 2025 - Desenvolupat amb Angular per Alicia Caparrós.',
       job1: { title: 'Programadora', company: 'Premium Numbers', description: ['Desenvolupament d\'un conjunt d\'extensions de navegador per a Chrome, enfocades a l\'optimització de la productivitat i la comunicació de l\'usuari.','Implementació d\'interfícies interactives per iniciar trucades i enviar missatges a través d\'una API REST de centraleta.','Automatització de fluxos de treball i integració de sistemes CRM utilitzant n8n i JavaScript.'] },
       job2: { title: 'Formadora i Desenvolupadora de Continguts Digitals', company: 'COCEDER', description: ['Anàlisi de les necessitats de l\'usuari per a dissenyar i adaptar continguts tecnològics, assegurant una corba d\'aprenentatge suau.','Suport tècnic i resolució de problemes a usuaris amb diferents nivells de competència digital.'] },
+      job3: {
+        title: 'Desenvolupadora Web',
+        company: 'Gabinet Psicosocial Kaidos',
+        description: [
+          'Desenvolupament i manteniment del lloc web principal de l\'empresa.',
+          'Gestió integral d\'aplicacions internes, assegurant el seu correcte funcionament i rendiment.',
+          'Creació de noves solucions de programari a mida per optimitzar l\'atenció a usuaris i pacients.',
+          'Seguiment i evolució de les eines tecnològiques adaptades a les necessitats del gabinet.'
+        ]
+      },
       project1: { title: 'Portfolio Professional (Aquest Projecte)', description: 'Portfolio personal interactiu desenvolupat des de zero amb les últimes versions d\'Angular per a mostrar els meus projectes i habilitats. Inclou mode clar/fosc i un disseny responsive.' },
       project2: { title: 'ClickToCall - Extensió de Chrome', description: 'Extensió complexa que detecta telèfons en webs i permet trucar o enviar missatges de WhatsApp via API, injectant UI dinàmica a les pàgines.' },
       project3: {
@@ -144,7 +212,7 @@ export class TranslationService {
         description: 'Aplicació web dedicada a explorar i fomentar l\'apego conscient, oferint recursos i eines per a entendre les dinàmiques de les relacions i el benestar emocional. Desenvolupada amb Angular.'
       }
     },
-    gl: { // traducciones correctas al gallego
+    gl: { 
       nav_about: 'Sobre min',
       nav_experience: 'Experiencia',
       nav_projects: 'Os meus proxectos',
@@ -164,6 +232,16 @@ export class TranslationService {
       footer_text: '© 2025 - Desenvolvido con Angular por Alicia Caparrós.',
       job1: { title: 'Programadora', company: 'Premium Numbers', description: ['Desenvolvemento dun conxunto de extensións de navegador para Chrome, enfocadas na optimización da produtividade e a comunicación do usuario.','Implementación de interfaces interactivas para iniciar chamadas e enviar mensaxes a través dunha API REST de centraliña.','Automatización de fluxos de traballo e integración de sistemas CRM utilizando n8n e JavaScript.'] },
       job2: { title: 'Formadora e Desenvolvedora de Contidos Dixitais', company: 'COCEDER', description: ['Análise das necesidades do usuario para deseñar e adaptar contidos tecnolóxicos, asegurando unha curva de aprendizaxe suave.','Soporte técnico e resolución de problemas a usuarios con distintos niveis de competencia dixital.'] },
+      job3: {
+        title: 'Desenvolvedora Web',
+        company: 'Gabinete Psicosocial Kaidos',
+        description: [
+          'Desenvolvemento e mantemento do sitio web principal da empresa.',
+          'Xestión integral de aplicacións internas, asegurando o seu correcto funcionamento e rendemento.',
+          'Creación de novas solucións de software a medida para optimizar a atención a usuarios e pacientes.',
+          'Seguimento e evolución das ferramentas tecnolóxicas adaptadas ás necesidades do gabinete.'
+        ]
+      },
       project1: { title: 'Portfolio Profesional (Este Proxecto)', description: 'Portfolio persoal interactivo desenvolvido desde cero coas últimas versións de Angular para amosar os meus proxectos e habilidades. Inclúe modo claro/escuro e un deseño responsive.' },
       project2: { title: 'ClickToCall - Extensión de Chrome', description: 'Extensión complexa que detecta teléfonos en webs e permite chamar ou enviar WhatsApps vía API, inxectando UI dinámica nas páxinas.' },
       project3: {
@@ -177,7 +255,7 @@ export class TranslationService {
     }
   };
 
-  public t = computed(() => this.translations[this.currentLanguage()]);
+  public t = computed<Translations>(() => this.translations[this.currentLanguage()]);
 
   public setLanguage(lang: Language) {
     this.currentLanguage.set(lang);
