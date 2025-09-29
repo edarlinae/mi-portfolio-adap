@@ -66,6 +66,7 @@ h2 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
   color: var(--text-primary);
+  text-align: center;
 }
 
 .project-content p {
@@ -81,23 +82,36 @@ h2 {
   gap: 1rem;
   margin-bottom: 1.5rem;
   align-items: center;
+  justify-content: center;
 }
 
 .tech-logo {
-  font-size: 24px; /* Tamaño del icono */
-  color: var(--text-secondary);
-  transition: color 0.3s ease;
+  font-size: 28px;
+  transition: transform 0.3s ease;
 }
 
-.project-card:hover .tech-logo {
-  color: var(--accent);
+.tech-logo:hover {
+  transform: scale(1.2);
 }
+
+/* --- ESTILOS DE COLOR PARA ICONOS (COMO EN EL PROYECTO ANTIGUO) --- */
+.tech-logo.fa-js { color: #f7df1e; }
+.tech-logo.fa-html5 { color: #e34f26; }
+.tech-logo.fa-css3-alt { color: #1572b6; }
+.tech-logo.fa-angular { color: #dd0031; }
+.tech-logo.fa-bootstrap { color: #7952b3; }
+.tech-logo.fa-sass { color: #cc6699; }
+.tech-logo.fa-figma { color: #f24e1e; }
+.tech-logo.fa-code { color: var(--text-secondary); } /* Color genérico para TS, etc. */
+/* --- FIN DE ESTILOS DE COLOR --- */
+
 
 .project-links {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: auto;
+  justify-content: center;
 }
 
 .project-link {
