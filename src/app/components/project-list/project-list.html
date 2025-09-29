@@ -12,13 +12,18 @@
           
           <div class="project-technologies">
             @for (tech of project.technologies; track tech.name) {
-              <!-- CAMBIO DEFINITIVO: Aplicar color directamente con [style.color] -->
-              <fa-icon 
-                class="tech-logo" 
-                [icon]="tech.icon" 
-                [title]="tech.name"
-                [style.color]="tech.color">
-              </fa-icon>
+              @if (tech.isCustom) {
+                <span class="ts-icon" title="TypeScript">TS</span>
+              } @else if (tech.icon) {
+                <fa-icon 
+                  class="tech-logo" 
+                  [icon]="tech.icon" 
+                  [title]="tech.name"
+                  [style.color]="tech.color">
+                </fa-icon>
+              } @else if (tech.text) {
+                <span class="tech-text" [title]="tech.name">{{ tech.text }}</span>
+              }
             }
           </div>
 

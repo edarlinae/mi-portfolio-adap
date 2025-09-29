@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 import { TranslationService, ProjectTranslations } from '../../services/translation';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faAngular, faBootstrap, faCss3Alt, faFigma, faGithub, faHtml5, faJs, faSass } from '@fortawesome/free-brands-svg-icons';
-import { faCode, faEye } from '@fortawesome/free-solid-svg-icons';
+// CAMBIO: Se elimina faFirebase de esta línea
+import { faAngular, faCss3Alt, faGithub, faHtml5, faJs, faSass } from '@fortawesome/free-brands-svg-icons';
+// CAMBIO: Se añade faDatabase a esta línea
+import { faCode, faEye, faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 export interface Technology {
   name: string;
-  icon: IconDefinition;
-  color: string; // <-- AÑADIR PROPIEDAD DE COLOR
+  icon?: IconDefinition;
+  text?: string;
+  color?: string;
+  isCustom?: boolean;
 }
 
 export interface Project {
@@ -40,8 +44,8 @@ export class ProjectListComponent {
       translationKey: 'project1',
       technologies: [
         { name: 'JavaScript', icon: faJs, color: '#f7df1e' },
-        { name: 'HTML', icon: faHtml5, color: '#e34f26' },
-        { name: 'CSS', icon: faCss3Alt, color: '#1572b6' },
+        { name: 'HTML5', icon: faHtml5, color: '#e34f26' },
+        { name: 'CSS3', icon: faCss3Alt, color: '#1572b6' },
         { name: 'Chrome API', icon: faCode, color: '#888' }
       ],
       liveDemoUrl: 'https://chromewebstore.google.com/detail/clicktocall-premium-number/hcdjknjpbnhdmpdkeofgmafdcepdbjfg?hl=es',
@@ -52,8 +56,10 @@ export class ProjectListComponent {
       translationKey: 'project2',
       technologies: [
         { name: 'Angular', icon: faAngular, color: '#dd0031' },
-        { name: 'TypeScript', icon: faCode, color: '#3178c6' },
-        { name: 'Bootstrap', icon: faBootstrap, color: '#7952b3' }
+        { name: 'TypeScript', isCustom: true },
+        { name: 'HTML5', icon: faHtml5, color: '#e34f26' },
+        { name: 'CSS3', icon: faCss3Alt, color: '#1572b6' },
+        { name: 'API REST', text: 'API REST' }
       ],
       liveDemoUrl: 'https://weather-app-edarlinae.vercel.app/',
       githubUrl: 'https://github.com/edarlinae/Weather-App'
@@ -63,9 +69,11 @@ export class ProjectListComponent {
       translationKey: 'project3',
       technologies: [
         { name: 'Angular', icon: faAngular, color: '#dd0031' },
-        { name: 'TypeScript', icon: faCode, color: '#3178c6' },
-        { name: 'SCSS', icon: faSass, color: '#cc6699' },
-        { name: 'Figma', icon: faFigma, color: '#f24e1e' }
+        { name: 'TypeScript', isCustom: true },
+        { name: 'HTML5', icon: faHtml5, color: '#e34f26' },
+        { name: 'CSS3', icon: faCss3Alt, color: '#1572b6' },
+        // CAMBIO: Se usa faDatabase como sustituto de Firebase
+        { name: 'Firebase', icon: faDatabase, color: '#FFCA28' }
       ],
       liveDemoUrl: '#',
       githubUrl: 'https://github.com/edarlinae/apego-consciente'
@@ -75,8 +83,9 @@ export class ProjectListComponent {
       translationKey: 'project4',
       technologies: [
         { name: 'Angular', icon: faAngular, color: '#dd0031' },
-        { name: 'TypeScript', icon: faCode, color: '#3178c6' },
-        { name: 'SCSS', icon: faSass, color: '#cc6699' }
+        { name: 'HTML5', icon: faHtml5, color: '#e34f26' },
+        { name: 'SCSS', icon: faSass, color: '#cc6699' },
+        { name: 'TypeScript', isCustom: true }
       ],
       liveDemoUrl: 'https://www.gabinetekairos.es/',
       githubUrl: 'https://github.com/edarlinae/kairos-web'

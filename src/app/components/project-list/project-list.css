@@ -51,7 +51,7 @@ h2 {
 .project-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* <-- Cambio realizado para centrar la imagen */
   object-position: center;
 }
 
@@ -85,26 +85,38 @@ h2 {
   justify-content: center;
 }
 
-.tech-logo {
+.tech-logo, .ts-icon, .tech-text {
   font-size: 28px;
   transition: transform 0.3s ease;
 }
 
-.tech-logo:hover {
+.tech-logo:hover, .ts-icon:hover, .tech-text:hover {
   transform: scale(1.2);
 }
 
-/* --- ESTILOS DE COLOR PARA ICONOS (COMO EN EL PROYECTO ANTIGUO) --- */
-.tech-logo.fa-js { color: #f7df1e; }
-.tech-logo.fa-html5 { color: #e34f26; }
-.tech-logo.fa-css3-alt { color: #1572b6; }
-.tech-logo.fa-angular { color: #dd0031; }
-.tech-logo.fa-bootstrap { color: #7952b3; }
-.tech-logo.fa-sass { color: #cc6699; }
-.tech-logo.fa-figma { color: #f24e1e; }
-.tech-logo.fa-code { color: var(--text-secondary); } /* Color genérico para TS, etc. */
-/* --- FIN DE ESTILOS DE COLOR --- */
+.tech-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background-color: var(--surface-darker);
+  line-height: 1;
+}
 
+.ts-icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-color: #3178c6;
+  color: white;
+  border-radius: 4px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  line-height: 28px;
+}
 
 .project-links {
   display: flex;
