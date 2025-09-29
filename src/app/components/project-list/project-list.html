@@ -10,21 +10,19 @@
           <h3>{{ getProjectTranslation(project.translationKey).title }}</h3>
           <p>{{ getProjectTranslation(project.translationKey).description }}</p>
           
-          <!-- SECCIÓN CORREGIDA -->
           <div class="project-technologies">
-            @for (tech of project.technologies; track tech) {
-              <span class="tech-tag">{{ tech }}</span>
+            @for (tech of project.technologies; track tech.name) {
+              <fa-icon class="tech-logo" [icon]="tech.icon" [title]="tech.name"></fa-icon>
             }
           </div>
-          <!-- FIN DE LA SECCIÓN CORREGIDA -->
 
           <div class="project-links">
-            <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="project-link">
-              <i class="fab fa-github"></i> Código
+            <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="project-link project-link--primary">
+              <fa-icon [icon]="faGithub"></fa-icon> GitHub
             </a>
             @if (project.liveDemoUrl && project.liveDemoUrl !== '#') {
-              <a [href]="project.liveDemoUrl" target="_blank" rel="noopener noreferrer" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Demo
+              <a [href]="project.liveDemoUrl" target="_blank" rel="noopener noreferrer" class="project-link project-link--secondary">
+                <fa-icon [icon]="faEye"></fa-icon> Demo
               </a>
             }
           </div>
