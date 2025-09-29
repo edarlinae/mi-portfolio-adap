@@ -1,34 +1,30 @@
-<div class="project-list-container">
+<div class="projects-container">
   <h2>{{ t().projects_title }}</h2>
-  <div class="project-grid">
+  <div class="projects-grid">
     @for (project of projects(); track project.translationKey) {
       <div class="project-card">
-        <div class="image-container">
-            <img class="project-image" [src]="project.imageUrl" [alt]="'Vista previa del proyecto ' + getProjectTranslation(project.translationKey).title">
+        <div class="project-image-container">
+          <img class="project-image" [src]="project.imageUrl" [alt]="'Vista previa del proyecto ' + getProjectTranslation(project.translationKey).title">
         </div>
-        <div class="card-content">
+        <div class="project-content">
           <h3>{{ getProjectTranslation(project.translationKey).title }}</h3>
           <p>{{ getProjectTranslation(project.translationKey).description }}</p>
-
-          <div class="project-logos">
-            @for (tech of project.technologies; track tech.name) {
-              <div class="tech-item">
-                @if (tech.iconUrl) {
-                  <img [src]="tech.iconUrl" [alt]="tech.name" [title]="tech.name">
-                } @else {
-                  <span class="tech-name">{{ tech.name }}</span>
-                }
-              </div>
+          
+          <!-- SECCIÓN CORREGIDA -->
+          <div class="project-technologies">
+            @for (tech of project.technologies; track tech) {
+              <span class="tech-tag">{{ tech }}</span>
             }
           </div>
+          <!-- FIN DE LA SECCIÓN CORREGIDA -->
 
           <div class="project-links">
-            <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="cta-button">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="github-icon"> GitHub
+            <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="project-link">
+              <i class="fab fa-github"></i> Código
             </a>
-            @if (project.liveDemoUrl) {
-              <a [href]="project.liveDemoUrl" target="_blank" rel="noopener noreferrer" class="cta-button secondary">
-                <span class="material-symbols-outlined">visibility</span> Demo
+            @if (project.liveDemoUrl && project.liveDemoUrl !== '#') {
+              <a [href]="project.liveDemoUrl" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Demo
               </a>
             }
           </div>

@@ -1,23 +1,23 @@
 import { Component, HostListener, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { Header } from './components/layout/header/header';
 import { Footer } from './components/layout/footer/footer';
 import { Hero } from './components/hero/hero';
-import { ProjectList } from './components/project-list/project-list';
+import { ProjectListComponent } from './components/project-list/project-list'; // <-- CORRECCIÓN
 import { ContactForm } from './components/contact-form/contact-form';
 import { Experience } from './components/experience/experience';
 import { AboutMe } from './components/about-me/about-me';
-import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, 
+    CommonModule,
     Header,
     Footer,
     Hero,
-    ProjectList,
+    ProjectListComponent, // <-- CORRECCIÓN
     ContactForm,
     Experience,
     AboutMe
@@ -28,12 +28,10 @@ import { CommonModule } from '@angular/common';
 export class App {
   title = 'portfolio-final';
 
-  // --- LÓGICA DEL BOTÓN DE SCROLL (NUEVO) ---
   showScrollButton = signal(false);
 
   @HostListener('window:scroll')
   onWindowScroll(): void {
-  
     if (window.scrollY > 300) {
       this.showScrollButton.set(true);
     } else {
@@ -44,5 +42,4 @@ export class App {
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-  // --- FIN DE LA LÓGICA DEL BOTÓN ---
 }

@@ -78,15 +78,18 @@ export class TranslationService {
           'Seguimiento y evolución de las herramientas tecnológicas adaptadas a las necesidades del gabinete.'
         ]
       },
-      project1: { title: 'Portfolio Profesional (Este Proyecto)', description: 'Portfolio personal interactivo desarrollado desde cero con las últimas versiones de Angular para mostrar mis proyectos y habilidades. Incluye modo claro/oscuro y un diseño responsive.' },
-      project2: { title: 'ClickToCall - Extensión de Chrome', description: 'Extensión compleja que detecta teléfonos en webs y permite llamar o enviar WhatsApps vía API, inyectando UI dinámica en las páginas.' },
-      project3: {
+      project1: { title: 'ClickToCall - Extensión de Chrome', description: 'Extensión compleja que detecta teléfonos en webs y permite llamar o enviar WhatsApps vía API, inyectando UI dinámica en las páginas.' },
+      project2: {
         title: 'Weather App (Angular)',
         description: 'Aplicación web completa para consultar el tiempo en tiempo real, desarrollada con Angular, que incluye un selector de idioma, historial de búsquedas y un diseño responsivo con modo claro/oscuro. Consume datos de una API REST.'
       },
-      project4: {
+      project3: {
         title: 'Apego Consciente',
         description: 'Aplicación web dedicada a explorar y fomentar el apego consciente, ofreciendo recursos y herramientas para entender las dinámicas de las relaciones y el bienestar emocional. Desarrollada con Angular.'
+      },
+      project4: { // <-- CAMBIO
+        title: 'Web Corporativa - Gabinete Kaidos',
+        description: 'Página web corporativa para un gabinete psicosocial, desarrollada con Angular. Diseño responsive, enfocado en la accesibilidad y en presentar los servicios del centro de forma clara y profesional.'
       }
     },
     en: {
@@ -119,15 +122,18 @@ export class TranslationService {
           'Monitoring and evolution of technological tools adapted to the firm\'s needs.'
         ]
       },
-      project1: { title: 'Professional Portfolio (This Project)', description: 'Interactive personal portfolio developed from scratch with the latest versions of Angular to showcase my projects and skills. Features light/dark mode and a responsive design.' },
-      project2: { title: 'ClickToCall - Chrome Extension', description: 'Complex extension that detects phone numbers on websites and allows calling or sending WhatsApp messages via API, injecting dynamic UI into the pages.' },
-      project3: {
+      project1: { title: 'ClickToCall - Chrome Extension', description: 'Complex extension that detects phone numbers on websites and allows calling or sending WhatsApp messages via API, injecting dynamic UI into the pages.' },
+      project2: {
         title: 'Weather App (Angular)',
         description: 'Complete web application to check the weather in real-time, developed with Angular, including a language selector, search history, and a responsive design with light/dark mode. Consumes data from a REST API.'
       },
-      project4: {
+      project3: {
         title: 'Apego Consciente',
         description: 'Web application dedicated to exploring and fostering conscious attachment, offering resources and tools to understand relationship dynamics and emotional well-being. Developed with Angular.'
+      },
+      project4: { // <-- CAMBIO
+        title: 'Corporate Website - Gabinete Kaidos',
+        description: 'Corporate website for a psychosocial office, developed with Angular. Responsive design, focused on accessibility and presenting the center\'s services in a clear and professional manner.'
       }
     },
     fr: {
@@ -160,15 +166,18 @@ export class TranslationService {
           'Suivi et évolution des outils technologiques adaptés aux besoins du cabinet.'
         ]
       },
-      project1: { title: 'Portfolio Professionnel (Ce Projet)', description: 'Portfolio personnel interactif développé à partir de zéro avec les dernières versions d\'Angular pour présenter mes projets et compétences. Inclut un mode clair/sombre et un design responsive.' },
-      project2: { title: 'ClickToCall - Extension Chrome', description: 'Extension complexe qui détecte les numéros de téléphone sur les sites web et permet d\'appeler ou d\'envoyer des messages WhatsApp via une API, en injectant une UI dynamique dans les pages.' },
-      project3: {
+      project1: { title: 'ClickToCall - Extension Chrome', description: 'Extension complexe qui détecte les numéros de téléphone sur les sites web et permet d\'appeler ou d\'envoyer des messages WhatsApp via une API, en injectant une UI dynamique dans les pages.' },
+      project2: {
         title: 'Weather App (Angular)',
         description: 'Application web complète pour consulter la météo en temps réel, développée avec Angular, comprenant un sélecteur de langue, un historique de recherche et un design responsive avec mode clair/sombre. Consomme des données d\'une API REST.'
       },
-      project4: {
+      project3: {
         title: 'Apego Consciente',
         description: 'Application web dédiée à explorer et à favoriser l\'attachement conscient, offrant des ressources et des outils pour comprendre les dynamiques relationnelles et le bien-être émotionnel. Développée avec Angular.'
+      },
+      project4: { // <-- CAMBIO
+        title: 'Site Web d\'Entreprise - Gabinete Kaidos',
+        description: 'Site web d\'entreprise pour un cabinet psychosocial, développé avec Angular. Design responsive, axé sur l\'accessibilité et la présentation claire et professionnelle des services du centre.'
       }
     },
     ca: {
@@ -201,15 +210,18 @@ export class TranslationService {
           'Seguiment i evolució de les eines tecnològiques adaptades a les necessitats del gabinet.'
         ]
       },
-      project1: { title: 'Portfolio Professional (Aquest Projecte)', description: 'Portfolio personal interactiu desenvolupat des de zero amb les últimes versions d\'Angular per a mostrar els meus projectes i habilitats. Inclou mode clar/fosc i un disseny responsive.' },
-      project2: { title: 'ClickToCall - Extensió de Chrome', description: 'Extensió complexa que detecta telèfons en webs i permet trucar o enviar missatges de WhatsApp via API, injectant UI dinàmica a les pàgines.' },
-      project3: {
+      project1: { title: 'ClickToCall - Extensió de Chrome', description: 'Extensió complexa que detecta telèfons en webs i permet trucar o enviar missatges de WhatsApp via API, injectant UI dinàmica a les pàgines.' },
+      project2: {
         title: 'Weather App (Angular)',
         description: 'Aplicació web completa per a consultar el temps en temps real, desenvolupada amb Angular, que inclou un selector d\'idioma, historial de cerques i un disseny responsiu amb mode clar/fosc. Consumeix dades d\'una API REST.'
       },
-      project4: {
+      project3: {
         title: 'Apego Consciente',
         description: 'Aplicació web dedicada a explorar i fomentar l\'apego conscient, oferint recursos i eines per a entendre les dinàmiques de les relacions i el benestar emocional. Desenvolupada amb Angular.'
+      },
+      project4: { // <-- CAMBIO
+        title: 'Web Corporativa - Gabinet Kaidos',
+        description: 'Pàgina web corporativa per a un gabinet psicosocial, desenvolupada amb Angular. Disseny responsive, enfocat en l\'accessibilitat i en presentar els serveis del centre de forma clara i professional.'
       }
     },
     gl: { 
@@ -242,15 +254,18 @@ export class TranslationService {
           'Seguimento e evolución das ferramentas tecnolóxicas adaptadas ás necesidades do gabinete.'
         ]
       },
-      project1: { title: 'Portfolio Profesional (Este Proxecto)', description: 'Portfolio persoal interactivo desenvolvido desde cero coas últimas versións de Angular para amosar os meus proxectos e habilidades. Inclúe modo claro/escuro e un deseño responsive.' },
-      project2: { title: 'ClickToCall - Extensión de Chrome', description: 'Extensión complexa que detecta teléfonos en webs e permite chamar ou enviar WhatsApps vía API, inxectando UI dinámica nas páxinas.' },
-      project3: {
+      project1: { title: 'ClickToCall - Extensión de Chrome', description: 'Extensión complexa que detecta teléfonos en webs e permite chamar ou enviar WhatsApps vía API, inxectando UI dinámica nas páxinas.' },
+      project2: {
         title: 'Weather App (Angular)',
         description: 'Aplicación web completa para consultar o tempo en tempo real, desenvolvida con Angular, que inclúe un selector de idioma, historial de buscas e un deseño responsivo con modo claro/escuro. Consume datos dunha API REST.'
       },
-      project4: {
+      project3: {
         title: 'Apego Consciente',
         description: 'Aplicación web dedicada a explorar e fomentar o apego consciente, ofrecendo recursos e ferramentas para entender as dinámicas das relacións e o benestar emocional. Desenvolvida con Angular.'
+      },
+      project4: { // <-- CAMBIO
+        title: 'Web Corporativa - Gabinete Kaidos',
+        description: 'Páxina web corporativa para un gabinete psicosocial, desenvolvida con Angular. Deseño responsive, enfocado na accesibilidade e en presentar os servizos do centro de forma clara e profesional.'
       }
     }
   };
