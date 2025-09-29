@@ -1,0 +1,144 @@
+.projects {
+  padding-top: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  background-color: var(--surface);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  background-color: color-mix(in srgb, var(--background) 50%, #fff);
+  padding: 1.5rem;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.card-content p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.tech-list {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  flex-grow: 0 !important;
+}
+
+.project-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.project-logos img {
+  height: 28px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.project-logos img:hover {
+  transform: scale(1.1);
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card-content a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: var(--accent);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-top: auto;
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; 
+}
+
+.card-content a.secondary {
+    background-color: var(--surface-darker);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.card-content a.secondary:hover {
+    background-color: color-mix(in srgb, var(--text-primary) 15%, transparent);
+    color: var(--text-primary);
+}
+
+.card-content a:hover {
+  background-color: var(--text-primary);
+  transform: scale(1.03);
+}
+
+
+.cta-button .github-icon {
+  height: 20px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}

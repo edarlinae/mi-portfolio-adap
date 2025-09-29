@@ -1,0 +1,52 @@
+/* 1. Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* 2. Definir paleta de colores para MODO CLARO (por defecto) */
+:root {
+  --background: #eae3f0b4;
+  --surface: #ffffff;
+  --accent: #917bbd;
+  --text-primary: #1c2541;
+  --text-secondary: #6b7d9c;
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --border-color: #dbe4f0;
+}
+
+/* 3. Definir paleta de colores para MODO OSCURO */
+body.dark-mode {
+  --background: #121212;
+  --surface: #1E1E1E;
+  --accent: #917bbd;
+  --text-primary: #EAEAEA;
+  --text-secondary: #B0B0B0;
+  --shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+  --border-color: #333333;
+}
+
+/* 4. Reset básico y estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  padding-top: 5rem;
+}

@@ -1,0 +1,14 @@
+<div class="contact-container">
+  <h2>{{ t().contact_title }}</h2>
+  <p>{{ t().contact_p1 }}</p>
+  <div class="contact-links">
+    <a [href]="'mailto:' + email()" class="contact-button">
+      <span class="material-symbols-outlined">mail</span>
+      {{ email() }}
+    </a>
+    <a [href]="'tel:' + phone()" class="contact-button">
+      <span class="material-symbols-outlined">call</span>
+      {{ phone() }}
+    </a>
+  </div>
+</div>

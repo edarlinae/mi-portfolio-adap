@@ -1,0 +1,37 @@
+<header>
+  <div class="header-content">
+    <nav>
+      <a href="#sobre-mi">{{ t().nav_about }}</a>
+      <a href="#experiencia">{{ t().nav_experience }}</a>
+      <a href="#proyectos">{{ t().nav_projects }}</a>
+      <a href="#contacto">{{ t().nav_contact }}</a>
+    </nav>
+    
+    <div class="controls">
+      <div class="language-switcher">
+        <button class="current-lang-btn" (click)="toggleLangMenu()">
+          <span class="material-symbols-outlined">language</span>
+          <span>Idioma</span>
+        </button>
+        
+        @if (isLangMenuOpen()) {
+          <div class="language-dropdown">
+            @for (lang of languages; track lang.code) {
+              <button class="lang-option" (click)="selectLanguage(lang)">
+                <img [src]="lang.flagUrl" [alt]="lang.name">
+                <span>{{ lang.name }}</span>
+              </button>
+            }
+          </div>
+        }
+      </div>
+
+      <button (click)="toggleTheme()" class="theme-toggle" [attr.aria-label]="'Cambiar a modo ' + (isDarkMode() ? 'claro' : 'oscuro')">
+        <span class="material-symbols-outlined">
+          {{ isDarkMode() ? 'light_mode' : 'dark_mode' }}
+        </span>
+      </button>
+    </div>
+
+  </div>
+</header>

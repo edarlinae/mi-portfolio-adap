@@ -1,0 +1,31 @@
+<app-header />
+
+<main>
+  <section>
+    <app-hero />
+  </section>
+
+  <section id="sobre-mi">
+    <app-about-me />
+  </section>
+
+  <section id="experiencia">
+    <app-experience />
+  </section>
+
+  <section id="proyectos">
+    <app-project-list />
+  </section>
+  
+  <section id="contacto">
+    <app-contact-form />
+  </section>
+</main>
+
+@if (showScrollButton()) {
+  <button (click)="scrollToTop()" class="scroll-to-top" aria-label="Volver arriba">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+}
+
+<app-footer />

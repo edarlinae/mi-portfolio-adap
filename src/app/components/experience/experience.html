@@ -1,0 +1,18 @@
+<div class="experience-container">
+  <h2>{{ t().experience_title }}</h2>
+  <div class="timeline">
+    @for (job of jobs(); track job.translationKey) {
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="date">{{ job.date }}</span>
+          <h3>{{ getJobTranslation(job.translationKey).title }} &middot; <span class="company">{{ getJobTranslation(job.translationKey).company }}</span></h3>
+          <ul>
+            @for (item of getJobTranslation(job.translationKey).description; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    }
+  </div>
+</div>
