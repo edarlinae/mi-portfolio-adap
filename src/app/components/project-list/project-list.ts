@@ -37,7 +37,6 @@ export class ProjectListComponent {
   faEye = faEye;
 
   protected readonly projects = signal<Project[]>([
-    // ORDEN ACTUALIZADO
     { // 1. Kairos
       imageUrl: 'assets/kairosgab.png',
       translationKey: 'project4',
@@ -50,7 +49,7 @@ export class ProjectListComponent {
       liveDemoUrl: 'https://www.gabinetekairos.es/',
       githubUrl: 'https://github.com/edarlinae/kairos-web'
     },
-    { // 2. Apego Consciente
+    { // 2. Apego Consciente 
       imageUrl: 'assets/apego-consciente.png',
       translationKey: 'project3',
       technologies: [
@@ -60,10 +59,10 @@ export class ProjectListComponent {
         { name: 'CSS3', icon: faCss3Alt, color: '#1572b6' },
         { name: 'Firebase', icon: faDatabase, color: '#FFCA28' }
       ],
-      liveDemoUrl: '#',
+      liveDemoUrl: 'https://apego-consciente.vercel.app', // <-- DEMO habilitado
       githubUrl: 'https://github.com/edarlinae/apego-consciente'
     },
-    { // 3. ClickToCall
+    { // 3. ClickToCall 
       imageUrl: 'assets/clicktocall-preview.png',
       translationKey: 'project1',
       technologies: [
@@ -72,7 +71,7 @@ export class ProjectListComponent {
         { name: 'CSS3', icon: faCss3Alt, color: '#1572b6' },
         { name: 'Chrome API', icon: faCode, color: '#888' }
       ],
-      liveDemoUrl: 'https://chromewebstore.google.com/detail/clicktocall-premium-number/hcdjknjpbnhdmpdkeofgmafdcepdbjfg?hl=es',
+      liveDemoUrl: '#', 
       githubUrl: 'https://github.com/edarlinae/ClickToCall'
     },
     { // 4. Weather App
@@ -85,7 +84,7 @@ export class ProjectListComponent {
         { name: 'CSS3', icon: faCss3Alt, color: '#1572b6' },
         { name: 'API REST', text: 'API REST' }
       ],
-      liveDemoUrl: 'https://weather-app-edarlinae.vercel.app/',
+      liveDemoUrl: '#',
       githubUrl: 'https://github.com/edarlinae/Weather-App'
     }
   ]);
